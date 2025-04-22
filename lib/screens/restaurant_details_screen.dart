@@ -120,7 +120,7 @@ class RestaurantDetailsScreen extends ConsumerWidget {
                   ),
                 // Price, Categories, and Open Status
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+                  padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -190,13 +190,13 @@ class RestaurantDetailsScreen extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Divider(height: 1, color: Colors.black12),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 24),
                       Text('Address', style: AppTextStyles.openRegularText.copyWith(
                                 color: Colors.black,
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,                                
                               ),),
-                      const SizedBox(height: 8),
+                      const SizedBox(height: 24),
                       Text(restaurant.location?.formattedAddress ?? 'No address available',
                           style: AppTextStyles.openRegularText.copyWith(
                                 color: Colors.black,

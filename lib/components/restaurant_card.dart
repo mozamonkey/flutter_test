@@ -104,14 +104,9 @@ class RestaurantCard extends StatelessWidget {
                       children: [
                         // Rating stars
                         Row(
-                          children: List.generate(5, (index) {
-                            final rating = restaurant.rating ?? 0;
+                          children: List.generate(restaurant.rating?.round() ?? 0, (index) {                            
                             return Icon(
-                              index < rating.floor()
-                                  ? Icons.star
-                                  : (index < rating && rating % 1 != 0)
-                                      ? Icons.star_half
-                                      : Icons.star_border,
+                              Icons.star,                                  
                               size: 16,
                               color: Colors.amber[700],
                             );

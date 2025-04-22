@@ -3,9 +3,9 @@ import '../models/restaurant.dart';
 import '../services/restaurant_service.dart';
 import '../services/mock_restaurant_service.dart';
 
-// Use mock service in development
-final restaurantServiceProvider = Provider((ref) => MockRestaurantService());
-//final restaurantServiceProvider = Provider((ref) => RestaurantService());
+// Mock service in development
+//final restaurantServiceProvider = Provider((ref) => MockRestaurantService());
+final restaurantServiceProvider = Provider((ref) => RestaurantService());
 
 final restaurantsProvider = FutureProvider<RestaurantQueryResult?>((ref) async {
   final service = ref.watch(restaurantServiceProvider);

@@ -1,7 +1,7 @@
 class AppConfig {
   static const String yelpApiKey = String.fromEnvironment(
-    'YELP_API_KEY',
-    defaultValue: 'RocsuKwRMUDwGYDRQ23jLaScsrA4MJumiF1ngM1nFpneSv8c009m2uxaKKGPrH2sIZzSeXqKat6kS1LvwLVO-1rmxgwks7ctHO1tYN9wUzWrK439AxB0JD3h60oGaHYx',
+    'hREV5eAtAd_vLLU6dmSn_aXKc_ijwRKTquS8KyLT4L4Q19_lci69voLASbt8fC8qac-4jQaqn7QlKVh7sJe3ThtFfiB-3jHfgr2_0r-gWlH__XRqSGVPd2yF5p4GaHYx',
+    defaultValue: 'hREV5eAtAd_vLLU6dmSn_aXKc_ijwRKTquS8KyLT4L4Q19_lci69voLASbt8fC8qac-4jQaqn7QlKVh7sJe3ThtFfiB-3jHfgr2_0r-gWlH__XRqSGVPd2yF5p4GaHYx',
   );
   static const String yelpBaseUrl = 'https://api.yelp.com/v3/graphql';
 } 
