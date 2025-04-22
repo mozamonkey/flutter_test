@@ -2,7 +2,7 @@ String query(int offset) => '''
   query getRestaurants {
     search(location: "Las Vegas", limit: 20, offset: $offset) {
       total    
-      business {
+      businesses {
         id
         name
         price
