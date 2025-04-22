@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../typography.dart';
 import '../providers/favorites_provider.dart';
+import '../components/restaurant_card.dart';
 import 'restaurant_details_screen.dart';
 
 class RestaurantFavoritesScreen extends ConsumerWidget {
@@ -16,19 +17,19 @@ class RestaurantFavoritesScreen extends ConsumerWidget {
         title: Text('Favorite Restaurants', style: AppTextStyles.loraRegularHeadline),
       ),
       body: favorites.isEmpty
-          ? const Center(
-              child: Text('No favorite restaurants yet'),
+          ? Center(
+              child: Text(
+                'No favorite restaurants yet',
+                style: AppTextStyles.openRegularText,
+              ),
             )
           : ListView.builder(
+              padding: const EdgeInsets.only(top: 8, bottom: 16),
               itemCount: favorites.length,
               itemBuilder: (context, index) {
                 final restaurant = favorites[index];
-                return ListTile(
-                  leading: const Icon(Icons.favorite, color: Colors.red),
-                  title: Text(restaurant.name ?? 'Unnamed Restaurant'),
-                  subtitle: Text(
-                    restaurant.categories?.map((c) => c.title).join(', ') ?? '',
-                  ),
+                return RestaurantCard(
+                  restaurant: restaurant,
                   onTap: () {
                     Navigator.push(
                       context,

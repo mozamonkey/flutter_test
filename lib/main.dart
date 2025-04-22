@@ -16,7 +16,7 @@ class RestaurantTour extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Restaurant Tour',
+      title: 'RestaurantTour',
       home: const RestaurantListScreen(),
     );
   }

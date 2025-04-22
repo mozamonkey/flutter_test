@@ -44,7 +44,7 @@ class RestaurantDetailsScreen extends ConsumerWidget {
         ],
       ),
       body: restaurantAsync.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
+        loading: () => const Center(child: CircularProgressIndicator( color: Colors.black)),
         error: (error, stack) => Center(
           child: Text('Error: $error', style: AppTextStyles.openRegularText),
         ),
