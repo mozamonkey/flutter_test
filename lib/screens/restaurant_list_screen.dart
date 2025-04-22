@@ -75,8 +75,14 @@ class _RestaurantListScreenState extends ConsumerState<RestaurantListScreen> wit
       body: TabBarView(
         controller: _tabController,
         children: [
-          _buildRestaurantList(restaurantsAsync, favorites),
-          _buildFavoritesList(favorites),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: _buildRestaurantList(restaurantsAsync, favorites),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: _buildFavoritesList(favorites),
+          ),
         ],
       ),
     );

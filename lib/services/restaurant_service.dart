@@ -18,16 +18,11 @@ class RestaurantService {
         body: query(offset),
       );
 
-      // Detailed logging of the response
-      // print('Response Status Code: ${response.statusCode}');
-      // print('Response Headers: ${response.headers}');
-      // print('Response Body: ${response.body}');
 
       if (response.statusCode == 200) {
         final jsonResponse = jsonDecode(response.body);
         
-        // Log the parsed JSON structure
-        print('Parsed JSON Response: ${JsonEncoder.withIndent('  ').convert(jsonResponse)}');
+        
 
         // Check for GraphQL errors with detailed logging
         if (jsonResponse['errors'] != null) {
@@ -58,8 +53,8 @@ class RestaurantService {
           jsonResponse['data']['search'],
         );
       } else {
-        print('HTTP Error: ${response.statusCode}');
-        print('Error Response Body: ${response.body}');
+        // print('HTTP Error: ${response.statusCode}');
+        // print('Error Response Body: ${response.body}');
         return null;
       }
     } catch (e, stackTrace) {
@@ -84,11 +79,6 @@ class RestaurantService {
         headers: headers,
         body: singleRestaurantQuery(id),
       );
-
-      // Detailed logging of the response
-      print('Single Restaurant Response Status Code: ${response.statusCode}');
-      print('Single Restaurant Response Headers: ${response.headers}');
-      print('Single Restaurant Response Body: ${response.body}');
 
       if (response.statusCode == 200) {
         final jsonResponse = jsonDecode(response.body);
@@ -122,8 +112,8 @@ class RestaurantService {
           ],
         );
       } else {
-        print('HTTP Error in Single Restaurant Query: ${response.statusCode}');
-        print('Error Response Body: ${response.body}');
+        // print('HTTP Error in Single Restaurant Query: ${response.statusCode}');
+        // print('Error Response Body: ${response.body}');
         return null;
       }
     } catch (e, stackTrace) {
