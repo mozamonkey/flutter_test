@@ -25,7 +25,7 @@ class RestaurantCard extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Row(
             children: [
-              // Left side - Restaurant Image
+              //Restaurant Image
               ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.network(
@@ -46,7 +46,7 @@ class RestaurantCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 12),
-              // Right side - Restaurant Details
+              //Restaurant Details
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,7 +71,7 @@ class RestaurantCard extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 4),
-                    // Price and Categories in one line
+                    // Price and Categories
                     Row(
                       children: [
                         // Price

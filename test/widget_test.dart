@@ -5,13 +5,19 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:restaurant_tour/main.dart';
 import 'package:restaurant_tour/providers/restaurant_provider.dart';
 import 'package:restaurant_tour/models/restaurant.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
+  setUp(() {
+    SharedPreferences.setMockInitialValues({});
+  });
+
   testWidgets('Page loads with correct initial UI elements', (WidgetTester tester) async {
-    // Create a ProviderContainer with overrides for testing
+    final prefs = await SharedPreferences.getInstance();
+    
     final container = ProviderContainer(
       overrides: [
-        // Override the restaurants provider for testing
+        sharedPreferencesProvider.overrideWithValue(prefs),
         restaurantsProvider.overrideWith((ref) => 
           Future.value(RestaurantQueryResult(restaurants: []))
         ),
@@ -41,8 +47,11 @@ void main() {
   });
 
   testWidgets('Can switch between tabs', (WidgetTester tester) async {
+    final prefs = await SharedPreferences.getInstance();
+    
     final container = ProviderContainer(
       overrides: [
+        sharedPreferencesProvider.overrideWithValue(prefs),
         restaurantsProvider.overrideWith((ref) => 
           Future.value(const RestaurantQueryResult(restaurants: []))
         ),

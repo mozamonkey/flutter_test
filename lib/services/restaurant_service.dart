@@ -83,8 +83,6 @@ class RestaurantService {
       if (response.statusCode == 200) {
         final jsonResponse = jsonDecode(response.body);
         
-        // Log the parsed JSON structure
-        print('Parsed Single Restaurant JSON Response: ${JsonEncoder.withIndent('  ').convert(jsonResponse)}');
 
         // Check for GraphQL errors
         if (jsonResponse['errors'] != null) {
