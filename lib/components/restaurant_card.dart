@@ -76,7 +76,7 @@ class RestaurantCard extends StatelessWidget {
                         Text(
                           restaurant.price ?? '',
                           style: AppTextStyles.openRegularText.copyWith(
-                            color: Colors.black54,
+                            color: Colors.black,
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
                           ),
@@ -87,7 +87,7 @@ class RestaurantCard extends StatelessWidget {
                           child: Text(
                             restaurant.categories?.map((c) => c.title).join(' • ') ?? '',
                             style: AppTextStyles.openRegularText.copyWith(
-                              color: Colors.black54,
+                              color: Colors.black,
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
                             ),
@@ -125,13 +125,13 @@ class RestaurantCard extends StatelessWidget {
                                   ? 'Open Now'
                                   : 'Closed',
                               style: AppTextStyles.openRegularText.copyWith(
-                                color: Colors.black54,
+                                color: Colors.black,
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
                                 fontStyle: FontStyle.italic,
                               ),
                             ),
-                            const SizedBox(width: 4),
+                            const SizedBox(width: 8),
                             Container(
                               width: 8,
                               height: 8,

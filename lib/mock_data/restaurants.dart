@@ -11,11 +11,31 @@ final mockRestaurants = [
       Review(
         id: 'r1',
         rating: 5,
-        text: 'Amazing food and service!',
+        text: 'Amazing food and service! The staff was very friendly and the food was delicious.',
         user: User(
           id: 'u1',
           name: 'John Doe',
-          imageUrl: 'https://example.com/user1.jpg',
+          imageUrl: 'https://i.pravatar.cc/150?img=1',
+        ),
+      ),
+      Review(
+        id: 'r2',
+        rating: 3,
+        text: 'Best sushi in town!',
+        user: User(
+          id: 'u2',
+          name: 'Jane Smith',
+          imageUrl: 'https://i.pravatar.cc/150?img=2',
+        ),
+      ),
+      Review(
+        id: 'r2',
+        rating: 2,
+        text: 'The food was good but the service was slow.',
+        user: User(
+          id: 'u2',
+          name: 'Mike Stone',
+          imageUrl: 'https://i.pravatar.cc/150?img=3',
         ),
       ),
     ],
@@ -44,7 +64,7 @@ final mockRestaurants = [
         user: User(
           id: 'u2',
           name: 'Jane Smith',
-          imageUrl: 'https://example.com/user2.jpg',
+          imageUrl: 'https://i.pravatar.cc/150?img=23',
         ),
       ),
     ],
@@ -77,7 +97,7 @@ final mockRestaurants = [
         user: User(
           id: 'u3',
           name: 'Maria Garcia',
-          imageUrl: 'https://example.com/user3.jpg',
+          imageUrl: 'https://i.pravatar.cc/150?img=22',
         ),
       ),
     ],
@@ -110,7 +130,7 @@ final mockRestaurants = [
         user: User(
           id: 'u4',
           name: 'Sarah Wilson',
-          imageUrl: 'https://example.com/user4.jpg',
+          imageUrl: 'https://i.pravatar.cc/150?img=24',
         ),
       ),
     ],
@@ -133,7 +153,7 @@ final mockRestaurants = [
     id: '5',
     name: 'El Mariachi',
     price: '\$\$',
-    rating: 4.4,
+    rating: 2,
     photos: ['https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?w=800'],
     reviews: [
       Review(
@@ -143,7 +163,7 @@ final mockRestaurants = [
         user: User(
           id: 'u5',
           name: 'Carlos Rodriguez',
-          imageUrl: 'https://example.com/user5.jpg',
+          imageUrl: 'https://i.pravatar.cc/150?img=22',
         ),
       ),
     ],
@@ -166,7 +186,7 @@ final mockRestaurants = [
     id: '6',
     name: 'Golden Dragon',
     price: '\$\$',
-    rating: 4.3,
+    rating: 3,
     photos: ['https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800'],
     reviews: [
       Review(
@@ -176,7 +196,7 @@ final mockRestaurants = [
         user: User(
           id: 'u6',
           name: 'Lucy Chang',
-          imageUrl: 'https://example.com/user6.jpg',
+          imageUrl: 'https://i.pravatar.cc/150?img=7',
         ),
       ),
     ],
